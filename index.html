@@ -4,30 +4,149 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Seifu | Terminal Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #0d1117;
+      color: #c9d1d9;
+      font-family: "Courier New", monospace;
+      height: 100vh;
+    }
+
+    .typing-header {
+      display: flex;
+      justify-content: center;
+      margin: 40px 0 20px;
+      text-align: center;
+    }
+
+    .terminal {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    #output p {
+      margin: 4px 0;
+      white-space: pre-wrap;
+    }
+
+    .cmd {
+      color: #58a6ff;
+    }
+
+    .input-line {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .prompt {
+      margin-right: 8px;
+      color: #58a6ff;
+    }
+
+    input {
+      background: transparent;
+      border: none;
+      color: #c9d1d9;
+      outline: none;
+      width: 100%;
+      font-family: inherit;
+      font-size: 16px;
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Typing SVG Header -->
-<div class="typing-header">
-  <img
-    src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Hi%2C+I%27m+Aman+%F0%9F%91%8B;Web+Developer;Game+%26+Tool+Builder;Welcome+to+my+Terminal+Portfolio"
-    alt="Typing SVG"
-  />
-</div>
-
-<div class="terminal">
-  <div id="output">
-    <p>Welcome to Aman's terminal portfolio.</p>
-    <p>Type <span class="cmd">ls</span> to see available commands.</p>
+  <!-- Typing SVG Header -->
+  <div class="typing-header">
+    <img
+      src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=26&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Hi%2C+I%27m+Aman+%F0%9F%91%8B;Web+Developer;Game+%26+Tool+Builder;Welcome+to+my+Terminal+Portfolio"
+      alt="Typing SVG"
+    />
   </div>
 
-  <div class="input-line">
-    <span class="prompt">$</span>
-    <input type="text" id="commandInput" autofocus />
-  </div>
-</div>
+  <!-- Terminal -->
+  <div class="terminal">
+    <div id="output">
+      <p>Welcome to Aman's terminal portfolio.</p>
+      <p>Type <span class="cmd">ls</span> to see available commands.</p>
+    </div>
 
-<script src="script.js"></script>
+    <div class="input-line">
+      <span class="prompt">$</span>
+      <input type="text" id="commandInput" autofocus />
+    </div>
+  </div>
+
+  <script>
+    const input = document.getElementById("commandInput");
+    const output = document.getElementById("output");
+
+    const commands = {
+      ls: `
+Available commands:
+- about
+- projects
+- contact
+- clear
+      `,
+      about: `
+Hi, I'm Aman 👋
+A web developer who loves building games, tools, and clean UIs.
+      `,
+      projects: `
+Projects:
+- Kirka-style FPS game
+- Protox Map Maker
+- Terminal Portfolio
+      `,
+      contact: `
+Email: your@email.com
+GitHub: github.com/yourusername
+      `,
+    };
+
+    input.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        const cmd = input.value.trim();
+        if (!cmd) return;
+        printLine(`$ ${cmd}`);
+        runCommand(cmd);
+        input.value = "";
+      }
+    });
+
+    function printLine(text) {
+      const p = document.createElement("p");
+      p.textContent = text;
+      output.appendChild(p);
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+
+    function runCommand(cmd) {
+      if (cmd === "clear" || cmd === "cls") {
+        output.innerHTML = "";
+        return;
+      }
+
+      if (commands[cmd]) {
+        commands[cmd]
+          .trim()
+          .split("\n")
+          .forEach(line => printLine(line));
+      } else {
+        printLine(`Command not found: ${cmd}`);
+      }
+    }
+  </script>
+
 </body>
 </html>
