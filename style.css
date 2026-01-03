@@ -43,3 +43,9 @@ input {
   font-family: inherit;
   font-size: 16px;
 }
+
+.typing-header {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 20px;
+}
