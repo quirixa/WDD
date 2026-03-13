@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+  margin: 30px;
+  border: 3px solid pink;
+
+
+        }
+        body{
+            border: 3px solid blue;
+
+        }
+        .int-container{
+            border: 3px solid cyan;
+        }
+        p,h1,h2,h3{
+            border: none;
+        }
+        div:empty{
+            height: 60px;
+            background-color: beige;
+            
+        }
+        :root{
+            border-radius: 15px;
+        }
+        h1:first-child{
+            text-decoration: underline;
+            font-style: italic;
+
+        }
+        h1:first-of-type{
+            background-color: aqua;
+
+        }
+        h1:last-of-type{
+            background-color: orange;
+        }
+        p:only-of-type{background-color: cadetblue;
+
+        }
+        p:nth-child(3){
+            background-color: yellow;
+        }
+
+    </style>
+    
+    <div></div>
+    <h3></h3>
+    <h3></h3>
+    <div class="int-container">
+        <div class="container1">
+            <h1>header1 in external container</h1>
+
+        </div>
+        <div class="container2">
+            <h2>header2</h2>
+            <h2>header2</h2>
+            <p>paragraph</p>
+        </div>
+        <div class="container3"></div>
+        <div class="container4">
+            <p>paragraph</p>
+            <p>paragraph</p>
+            <p>paragraph</p>
+            <p>paragraph</p>
+        </div>
+    </div>
+
+    
+</body>
+</html>

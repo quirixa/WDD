@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style> 
+    /*makes the text color black*/
+        .container p {
+    color: blue;
+          }
+          #extcontainer {
+    width: 80%;
+    height: 80%;
+    margin: 0 auto;
+}
+
+
+    </style>
+    <div id="extcontainer">
+    <div class="container">
+        <a><p>paragraph1</p></a>
+    </div>
+    <div class="container">
+        <p>paragraph2</p>
+    </div>
+    <div class="container">
+        <p>paragraph3</p>
+    </div>
+    <div class="container">
+        <p>paragraph4</p>
+    </div>
+     <div class="container">
+        <p>paragraph5</p>
+    </div>
+     <div class="container">
+        <p>paragraph6</p>
+    </div>
+     <div class="container">
+        <p>paragraph7</p>
+    </div>
+     <div class="container">
+        <p>paragraph8</p>
+    </div>
+     <div class="container">
+        <p>paragraph9</p>
+    </div>
+     <div class="container">
+        <p>paragraph10</p>
+    </div>
+    </div>
+    
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .extcontainer {
+            width: 500px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: antiquewhite;
+            border: 3px solid green;
+            border-radius: 10px;
+        }
+
+        .extcontainer h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .gender-input,
+        .course-input {
+            margin-top: 5px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 8px 15px;
+            margin-top: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: red;
+            color: white;
+            margin-left: 10px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: darkgreen;
+        }
+
+        input[type="reset"]:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="#" method="post">
+        <div class="extcontainer">
+            <h2>Apply Job</h2>
+
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" required placeholder="e.g. Rekik Solomon">
+            </div>
+
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" name="email" required placeholder="example@gmail.com">
+            </div>
+
+            <div class="form-group">
+                <label>Phone:</label>
+                <input type="tel" name="phone-number" required placeholder="+251912345678">
+            </div>
+
+            <div class="form-group">
+                <label>Nationality:</label>
+                <input type="text" name="nationality" required placeholder="American">
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="gender-input">
+                    <input type="radio" value="male" name="gender" required> Male
+                    <input type="radio" value="female" name="gender"> Female
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Courses:</label>
+                <div class="course-input">
+                    <input type="checkbox" name="course" value="web-development"> Web Development<br>
+                    <input type="checkbox" name="course" value="networking"> Networking<br>
+                    <input type="checkbox" name="course" value="AI"> AI<br>
+                    <input type="checkbox" name="course" value="graphics-design"> Graphics Design
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Qualification:</label>
+                <select name="qualification" required>
+                    <option value="">-- Select Qualification --</option>
+                    <option value="high-school">High School</option>
+                    <option value="diploma">Diploma</option>
+                    <option value="bachelor">Bachelor's Degree</option>
+                    <option value="master">Master's Degree</option>
+                    <option value="phd">PhD</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Experience:</label>
+                <input type="text" name="experience" required placeholder="e.g. 3 years">
+            </div>
+
+            <div class="form-group">
+                <label>BA Point:</label>
+                <input type="number" name="bapoint" min="0" max="100" required placeholder="Enter BA Points">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+
+        </div>
+    </form>
+
+</body>
+</html>

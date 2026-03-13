@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comments</title>
+
+<style>
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background:#f0f2f5;
+    padding:40px;
+}
+
+
+
+.comment{
+    display:flex;
+    gap:12px;
+    background:white;
+    border-radius:12px;
+    padding:12px;
+    margin-bottom:12px;
+}
+
+.comment img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.content{
+    width:100%;
+}
+
+.header{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.header h3{
+    font-size:15px;
+    margin:0;
+}
+
+.time{
+    font-size:12px;
+    color:gray;
+}
+
+p{
+    margin:6px 0 8px 0;
+    font-size:14px;
+}
+
+.reaction-bar{
+    display:flex;
+    gap:15px;
+    font-size:13px;
+}
+
+.react-btn{
+    border:none;
+    background:none;
+    cursor:pointer;
+    color:#555;
+}
+
+.react-btn:hover{
+    text-decoration:underline;
+}
+
+.reply-btn{
+    border:none;
+    background:none;
+    color:#1877f2;
+    font-size:13px;
+    cursor:pointer;
+}
+
+.reply-btn:hover{
+    text-decoration:underline;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="comments">
+
+<div class="comment">
+
+<img src="Images/Tim.jpg">
+
+<div class="content">
+
+<div class="header">
+<h3>Chris Ballance</h3>
+<span class="time">5:00 pm</span>
+</div>
+
+<p>
+In 1989, while working at CERN in Switzerland,
+Berners-Lee proposed a system to help scientists share information.
+</p>
+
+<div class="reaction-bar">
+<button class="react-btn">👍 4</button>
+<button class="react-btn">👎 1</button>
+<button class="reply-btn">Reply</button>
+</div>
+
+</div>
+</div>
+
+
+<div class="comment">
+
+<img src="Images/user2.jpg">
+
+<div class="content">
+
+<div class="header">
+<h3>Sarah Johnson</h3>
+<span class="time">6:10 pm</span>
+</div>
+
+<p>
+The World Wide Web later became one of the most important inventions,
+allowing people around the world to access and share information instantly.
+</p>
+
+<div class="reaction-bar">
+<button class="react-btn">👍 2</button>
+<button class="react-btn">👎 0</button>
+<button class="reply-btn">Reply</button>
+</div>
+
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

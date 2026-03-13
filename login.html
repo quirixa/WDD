@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <style>
+        .login-container{
+            width: 250px;
+            height:250px;
+            background-color: lightgray;
+            color: black;
+            margin: auto;
+            padding: 20px 10px;
+            border-radius: 20px;
+            
+        }
+     form {
+        margin:15px;
+     }
+     .username-input, .password,.checkbox,.registerlink{
+        border-radius: 20px;
+        margin: 10px;
+    }
+    button{
+        display: inline-block;
+        color: black;
+        border-radius: 2px;
+    }
+    
+    </style>
+
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <form action="#" method="post">
+            <div class ="username-input">
+                Username:
+                <input type="text" name="username" required>
+            </div>
+        
+
+            <div class="password">
+                Password:
+                <input type="password" name="password" required>
+            </div>
+           
+
+            <div class="checkbox">
+                <input type="checkbox" name="remember">
+                Remember me
+            </div>
+        
+            <a href="#" color="green">don't have an account?</a>
+            <br>
+            <a href="#" class="forgot-password">Forgot password?</a>
+        
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>

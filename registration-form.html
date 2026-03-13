@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .extcontainer {
+            width: 500px;
+            margin: 50px auto;
+            padding: 25px;
+            background-color: antiquewhite;
+            border: 3px solid green;
+            border-radius: 10px;
+        }
+        .extcontainer h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .inputdiv {
+            margin-bottom: 15px;
+        }
+        .inputdiv input,
+        .inputdiv select {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 3px solid blue;
+        }
+        .gender-input,
+        .course-input {
+            margin-top: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: green;
+            color: white;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkgreen;
+            color: yellow;
+        }
+        input:required {
+            border: 3px solid red;
+        }
+        input:invalid {
+            border: 3px solid yellow;
+        }
+        input:valid {
+            border: 3px solid green;
+        }
+        select:required:invalid {
+            border: 3px solid yellow;
+        }
+        select:valid {
+            border: 3px solid green;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="extcontainer">
+        <h1>Apply Job</h1>
+        <div class="inputdiv">
+            <label>Name:</label>
+            <input type="text" name="name" required placeholder="e.g. Rekik Solomon">
+        </div>
+        <div class="inputdiv">
+            <label>Email:</label>
+            <input type="email" name="email" required placeholder="example@gmail.com">
+        </div>
+        <div class="inputdiv">
+            <label>Phone:</label>
+            <input type="tel" name="phone-number" placeholder="+251912345678" required pattern="[0-9]{10}">
+        </div>
+        <div class="inputdiv">
+            <label>Nationality:</label>
+            <input type="text" name="nationality" required placeholder="American">
+        </div>
+        <div class="gender-input">
+            <label>Gender:</label>
+            <div class="gender-input">
+                <input type="radio" value="male" name="gender" required> Male
+                <input type="radio" value="female" name="gender"> Female
+            </div>
+        </div>
+        <div class="course-input">
+            <label>Courses:</label>
+            <div class="course-input">
+                <input type="checkbox" name="course" value="web-development"> Web Development<br>
+                <input type="checkbox" name="course" value="networking"> Networking<br>
+                <input type="checkbox" name="course" value="AI"> AI<br>
+                <input type="checkbox" name="course" value="graphics-design"> Graphics Design
+            </div>
+        </div>
+        <div class="inputdiv">
+            <label>Qualification:</label>
+            <select name="qualification" required>
+                <option value="">-- Select Qualification --</option>
+                <option value="high-school">High School</option>
+                <option value="diploma">Diploma</option>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+                <option value="phd">PhD</option>
+            </select>
+        </div>
+        <div class="inputdiv">
+            <label>Experience:</label>
+            <input type="text" name="experience" required placeholder="e.g. 3 years">
+        </div>
+        <div class="inputdiv">
+            <label>BA Point:</label>
+            <input type="number" name="bapoint" min="0" max="100" required placeholder="Enter BA Points">
+        </div>
+        <div class="inputdiv">
+            <label>Stream:</label>
+            <select name="stream" required>
+                <option value="">-- Select Stream --</option>
+                <optgroup label="Engineering">
+                    <option value="software-engineering">Software Engineering</option>
+                    <option value="Electrical Security">Electrical Security</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                </optgroup>
+                <optgroup label="Business">
+                    <option value="Accounting">Accounting</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="management">Management</option>
+                </optgroup>
+                <optgroup label="Health">
+                    <option value="Medicine">Medicine</option>
+                    <option value="Nursing">Nursing</option>
+                    <option value="pharmacy">pharmacy</option>
+                </optgroup>
+            </select>
+        </div>
+        <div class="inputdiv">
+            <label>Research Grade:</label>
+            <select name="research_grade" required>
+                <option value="">-- Select Grade --</option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="F">F</option>
+            </select>
+        </div>
+        <div class="inputdiv">
+            <label>Upload CV:</label>
+            <input type="file" name="cv" required>
+        </div>
+        <div class="inputdiv">
+            <button type="submit">Register</button>
+        </div>
+    </div>
+</body>
+</html>

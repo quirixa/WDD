@@ -1,0 +1,10 @@
+div{
+    width: 800px;
+    margin:20 auto;
+    padding:20px;
+}
+h1{
+    text-align: center;
+    font-weight: bolder;
+    font-family: "Arial black";
+}
